@@ -8,8 +8,8 @@
 #red&blue = purple, red&yellow = orange, blue&yellow = green
 
 #ask user to input 2 primary colors
-color_1 = input("Enter primary color 1 to be mixed (red, yellow, or blue)")
-color_2 = input("Enter primary color 2 to be mixed (red, yellow, or blue)")
+color_1 = input("Enter primary color 1 to be mixed (red, yellow, or blue) ")
+color_2 = input("Enter primary color 2 to be mixed (red, yellow, or blue) ")
 
 #check for correct input
 if color_1 == 'red' and color_2 == 'blue':

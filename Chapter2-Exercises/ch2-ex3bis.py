@@ -14,4 +14,4 @@ sqm = float(input('Enter total square meters of land: '))
 var_acres = sqm/4046.85664224
 
 #Prints acres
-print("Acres =",var_acres)
+print("Acres = {:.2f}".format(var_acres))
