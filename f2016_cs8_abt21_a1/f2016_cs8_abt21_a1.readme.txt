@@ -1,0 +1,22 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: sept 27 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Assignment 1 - Simple text file describing the thought process used to write the program
+
+My approach to this assignment (and on the exam) is to first ask the user to input which measurement system
+he or she wants to use, and then to ask for the distance driven and how much gasoline was used. I used an if statement
+here for added user experience so that the desired units are included in the input prompt.
+
+I then use if, elif, else to assign the input values to either metric or USC variables and then
+convert that variable to the other system by defining variables for the other system. The else statement
+is used to indicate that the user did not input one of the system options
+
+Using the four variables (distance and gas used for each system) that I have just created in the first if statement
+I will then calculate the fuel consumption for both systems
+
+After computing the fuel consumption I can then use if elif statements to determine the rating from the
+consumption category table in the assignment
+
+Finally, I'll print using the format function to create the proper formatting as described in the assignment

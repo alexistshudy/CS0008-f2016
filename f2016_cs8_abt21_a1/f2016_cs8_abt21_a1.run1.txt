@@ -1,0 +1,19 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: sept 27 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Testing program using Metric input
+
+
+/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/Alexis/Documents/CS0008/CS0008-f2016/f2016_cs8_abt21_a1/f2016_cs8_abt21_a1.py
+What measurement system would you like to use? (Enter 'Metric' or 'USC' and press enter) Metric
+Enter distance driven in kilometers 160
+Enter amount of gas used in liters 15
+              	USC 	Metric
+Distance____:   257.494   160.000
+Gas_________:    56.781    15.000
+Consumption_:     4.535     9.375
+Rating: Good
+
+Process finished with exit code 0
