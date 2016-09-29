@@ -3,19 +3,16 @@
 # date: sept 27 2016
 # class: CS0008-f2016
 # instructor : Max Novelli (man8@pitt.edu)
-# description: simple text file containing one test run of the program.
-# It has to show input provided by the user and output produced by the program.
-# This file is going to be used by the instructors to test the code and will contribute
-# to the assignment grade.
+# description: Testing program using USC input
 
 /Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/Alexis/Documents/CS0008/CS0008-f2016/f2016_cs8_abt21_a1/f2016_cs8_abt21_a1.py
-What measurement system would you like to use? (Enter 'Metric' or 'USC' and press enter) Metric
-Enter distance driven in kilometers 160
-Enter amount of gas used in liters 15
+What measurement system would you like to use? (Enter 'Metric' or 'USC' and press enter) USC
+Enter distance driven in miles 225
+Enter amount of gas used in gallons 10
               	USC 	Metric
-Distance____:   257.494   160.000
-Gas_________:    56.781    15.000
-Consumption_:     4.535     9.375
-Rating: Good
+Distance____:   225.000   139.809
+Gas_________:    10.000     2.642
+Consumption_:    22.500     1.890
+Rating: Excellent
 
 Process finished with exit code 0
