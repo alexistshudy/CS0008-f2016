@@ -5,7 +5,7 @@
 # instructor : Max Novelli (man8@pitt.edu)
 # description: Assignment 1 - Python Program
 
-# Ask users for inputs
+# Ask users for inputs, use if, elif, else to ease user interface
 user_system = input("What measurement system would you like to use? (Enter 'Metric' or 'USC' and press enter) ")
 if user_system == 'Metric':
     user_distance = float(input("Enter distance driven in kilometers "))
@@ -17,6 +17,7 @@ else:
     print('You did not enter an accepted measurement system')
 
 #Converts user inputs to metric and USC depending on the system the user chose
+#Do this by creating 4 new variables from user input variables
 if user_system == 'Metric':
     miles = user_distance * 1.60934
     km = user_distance
@@ -28,11 +29,11 @@ elif user_system == 'USC':
     gallons = user_gas
     liters = user_gas / 3.78541
 
-#Calculate consumption
+#Calculate consumption from miles, gallons, liters, and kilometers
 mpg = miles/gallons
 cm = 100 * liters/km
 
-#Assign Rating
+#Assign Rating using if, elif
 if cm > 20:
     rating = 'Extremely Poor'
 elif cm > 15:
@@ -44,7 +45,7 @@ elif cm > 8:
 elif cm <= 8:
     rating = 'Excellent'
 
-#Printing
+#Printing, format in table with width nine and 3 decimal place
 print('             ','\tUSC','\tMetric')
 print('Distance____:',format(miles,'9,.3f'),format(km,'9,.3f'))
 print('Gas_________:',format(gallons,'9,.3f'),format(liters,'9,.3f'))
