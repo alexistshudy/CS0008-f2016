@@ -16,7 +16,7 @@ is used to indicate that the user did not input one of the system options
 Using the four variables (distance and gas used for each system) that I have just created in the first if statement
 I will then calculate the fuel consumption for both systems
 
-After computing the fuel consumption I can then use if elif statements to determine the rating from the
+After computing the fuel consumption I then use if elif statements to determine the rating from the
 consumption category table in the assignment
 
-Finally, I'll print using the format function to create the proper formatting as described in the assignment
+Finally, I'll print using the format function (9,.3) to create the proper formatting as required by the assignment

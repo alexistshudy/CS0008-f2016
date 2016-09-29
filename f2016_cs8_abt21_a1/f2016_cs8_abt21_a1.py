@@ -35,11 +35,11 @@ cm = 100 * liters/km
 #Assign Rating
 if cm > 20:
     rating = 'Extremely Poor'
-elif cm > 15 and cm <= 20:
+elif cm > 15:
     rating = 'Poor'
-elif cm > 10 and cm <= 15:
+elif cm > 10:
     rating = 'Average'
-elif cm > 8 and cm <= 10:
+elif cm > 8:
     rating = 'Good'
 elif cm <= 8:
     rating = 'Excellent'
