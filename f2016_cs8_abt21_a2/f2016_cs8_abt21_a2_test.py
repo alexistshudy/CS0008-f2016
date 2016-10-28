@@ -17,17 +17,25 @@
 #distance = split_line[1]
 #print(distance)
 
-
+filename = "f2016_cs8_a2.data.1.csv"
+distance = 5000.50
+count = 50
 #define function: printKV(key,value,klen=0)
-def printKV(key,value,klen):
+def printKV(key,value,klen=0):
     #define the "width" as the maximum of the key itself or the specified key
     width = max(len(key),klen)
-    print width
-    #define value formatting depending on value type
-    type(value)
-    print type
-
-printKV(Distance,15,3)
+    widthvalue = str(width)
+    #define value formatting depending on variable type of value
+    if isinstance(value, str):
+        print(format(key,widthvalue),":",format(value,'20'))
+    elif isinstance(value, int):
+        print(format(key,widthvalue), ":", format(value, '10,d'))
+    elif isinstance(value, float):
+        print(format(key,widthvalue), ":", format(value, '10,.3f'))
+#
+printKV("File Name",filename, 20)
+printKV("Distance", distance, 20)
+printKV("Count", count, 20)
 
 
 
