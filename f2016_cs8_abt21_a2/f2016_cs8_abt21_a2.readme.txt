@@ -1,0 +1,27 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: October 28, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Asignment 2 - Simple text file describing the thought process that was used to write program
+
+
+For this assignment, it was necessary to create two functions (processFile and printKV).
+I started by defining both so that they could be used in my main script.
+
+    The printKV function allows for users to print a given key and value in the given format.
+    It first determines the field width of the key by taking the maximum of the key width and the optional klen arguement.
+    Then, it uses the isinstance function to test the variable type and choose the correct format depending on whether the value is a string, float, or integer
+
+    The processFile function features a for loop for reading through each line of a given file.
+    For each line the function utilizes rstrip and split to parse out the distance value in the second column of the file and assign it to the distance variable.
+    Next, the file adds 1 to the line_counter and adds the distance to a total distance aggregator.
+    When the function reaches the end of the file, the function outputs the file name, the total number of lines, and the total distance as well as an overall line count and distance (both global variables) for all files run through the function.
+    All output utilizes the printKV function previously defined.
+
+After defining both functions, I began the main script by asking the user for a file name to run.
+Then I used while loop to ensure the program allows users to continue to input files until they enter q or quit.
+    At this point I also initialize the global, overall variables to =0.
+Within the while loop, the program assigns the user input to a file name. - Note in this case it is assumed that the files are in the same folder as the script, thus only require relative paths.
+Then, the file is run through the processFile function and the user sees both outputs and is asked if they would like to run another file.
+    The processFile funciton is repeated until the user enters q or quit or a file that cannot be found.

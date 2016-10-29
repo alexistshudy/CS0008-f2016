@@ -1,0 +1,27 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: October 28, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Assignment 2 - Output when run
+
+
+/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/Alexis/Documents/CS0008/CS0008-f2016/f2016_cs8_abt21_a2/f2016_cs8_abt21_a2.py
+
+Please enter the name of the file you would like to use. Or to quit, please enter 'quit' or 'q'f2016_cs8_a2.data.1.csv
+File Name                 : f2016_cs8_a2.data.1.csv
+Partial Total # of Lines  :         50
+Partial distance run      :  2,298.967
+Totals
+Total Number of Lines     :         50
+Total Distance Run        :  2,298.967
+Would you like to process another file? Please enter the name of the file you would like to use. Or to quit, please enter 'quit' or 'q'f2016_cs8_a2.data.2.csv
+File Name                 : f2016_cs8_a2.data.2.csv
+Partial Total # of Lines  :         50
+Partial distance run      :  2,195.061
+Totals
+Total Number of Lines     :        100
+Total Distance Run        :  4,494.027
+Would you like to process another file? Please enter the name of the file you would like to use. Or to quit, please enter 'quit' or 'q'quit
+
+Process finished with exit code 0
