@@ -1,20 +1,34 @@
 from collections import defaultdict
 
 # length of the key
-FORMAT_KEY_LENGTH = 30
+FORMAT_KEY_LENGTH = 35
 
-#define function: printKV(key,value,klen=0)
-def printKV(key,value,klen=0):
-    #define the "width" as the maximum of the key itself or the specified key
-    width = max(len(key),klen)
-    widthvalue = str(width)
-    #define value formatting depending on variable type of value using isinstance
-    if isinstance(value, str):
-        print(format(key,widthvalue),":",format(value,'20'))
-    elif isinstance(value, int):
-        print(format(key,widthvalue), ":", format(value, '12,d'))
-    elif isinstance(value, float):
-        print(format(key,widthvalue), ":", format(value, '12,.5f'))
+#printKV function
+def printKV(key,value,klen = 0):
+    # check which is the length to be used when printing the key
+    # max of klen and the length of key
+    klen = max(klen,len(key));
+    # check which is type of value and choose the proper formatting
+    if isinstance(value,str):
+        # we have a string
+        fvalue = '20s'
+    elif isinstance(value,float):
+        # we have a float
+        fvalue = '10.3f'
+    elif isinstance(value,int):
+        # we have a integer
+        fvalue = '10d'
+    else:
+        # we do not know what we have,
+        # so we try our best to convert it to a string and
+        # format it as a string
+        value = str(value)
+        fvalue = '20s'
+    # end if
+    #
+    # print key and value with correct formatting
+    print(format(key,str(klen)+'s'),' : ',format(value,'<'+fvalue))
+# end def
 
 #initialize overall accumulator variables, to be updated with each new file input
 overall_filecount = 0
@@ -79,6 +93,21 @@ for name, dist in records:
     #uses collections module to append new names as new keys & for repeat names append additional dist values to the list for the same key
     distance_dict[name].append(dist)
 
+#find max and min distance values (notation from https://dbader.org/blog/python-min-max-and-nested-lists)
+max_dist = max(records, key=lambda x: x[1])
+max_part,max_dist = max_dist
+min_dist = min(records, key=lambda x: x[1])
+min_part,min_dist = min_dist
+
+printKV('Max distance run',max_dist,FORMAT_KEY_LENGTH)
+printKV('   by participant',max_part,FORMAT_KEY_LENGTH)
+
+printKV('Min distance run',min_dist,FORMAT_KEY_LENGTH)
+printKV('   by participant',min_part,FORMAT_KEY_LENGTH)
+
+#min_dist = min(records, key=lambda x: x[1])
+#print(min_dist)
+
 output_dict = defaultdict(dict)
 
 for k,v in distance_dict.items():
@@ -93,8 +122,8 @@ for k,v in distance_dict.items():
     output_dict[k] = [count,ind_total_dist]
 
 #print participant counts & repeat counts
-print(participant_count)
-print(repeat_count)
+printKV('Total number of participants',participant_count,FORMAT_KEY_LENGTH)
+printKV('# participants w/ multiple records',repeat_count, FORMAT_KEY_LENGTH)
 
 #output data file with name, count, and total distance for each participant
 import csv

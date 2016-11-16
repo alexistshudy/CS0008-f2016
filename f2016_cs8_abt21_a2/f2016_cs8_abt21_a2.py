@@ -28,6 +28,9 @@ def processFile(fh):
     total_distance = 0
     #For loop, runs through each line, adds one to counter and adds distance column to total_distance
     for line in open_file:
+        #can be combined into two lines:
+            #[name, distance] = line.rstrip('\n').split(',')
+            #distance = float(distance)
         #use .rstrip to remove new line created at the end
         line = line.rstrip("\n")
         #split string using .split; split on comma deliminator
@@ -39,6 +42,8 @@ def processFile(fh):
         total_distance += distance
 
     #print file-specific totals using printKV formatting
+    #use a constant instead of entering 25 on each of them...
+    #substitute print statements for a return, then print outside of the function
     printKV("File Name",filename,25)
     printKV("Partial Total # of Lines",line_count,25)
     printKV("Partial distance run",total_distance,25)
@@ -70,3 +75,6 @@ while userinput != "quit" and userinput != "q" and userinput != "":
     userinput = str(input("Would you like to process another file? Please enter the name of the file you would like to use. Or to quit, please enter 'quit' or 'q'"))
 
 
+
+#to ensure that the file exists in the directory... start the script with import os.path
+#in while loop, check as part of the conditions: and os.path.exists(file)
