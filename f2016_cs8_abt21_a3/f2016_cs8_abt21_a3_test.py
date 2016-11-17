@@ -81,29 +81,12 @@ for filename in filenames:
     #close the file
     open_file.close()
 
-#print processing summary (# of input files read, number of lines read, total distance run)
-printKV('Number of input files read',overall_filecount,FORMAT_KEY_LENGTH)
-printKV('Total number of lines read',overall_line_count,FORMAT_KEY_LENGTH)
-printKV('Total distance run',overall_distance,FORMAT_KEY_LENGTH)
-
 #Casts d as a dictionary using the defaultdict function from collections
 distance_dict= defaultdict(list)
 #for each elementi n the list, set the first value to name second to dist
 for name, dist in records:
     #uses collections module to append new names as new keys & for repeat names append additional dist values to the list for the same key
     distance_dict[name].append(dist)
-
-#find max and min distance values (notation from https://dbader.org/blog/python-min-max-and-nested-lists)
-max_dist = max(records, key=lambda x: x[1])
-max_part,max_dist = max_dist
-min_dist = min(records, key=lambda x: x[1])
-min_part,min_dist = min_dist
-
-printKV('Max distance run',max_dist,FORMAT_KEY_LENGTH)
-printKV('   by participant',max_part,FORMAT_KEY_LENGTH)
-
-printKV('Min distance run',min_dist,FORMAT_KEY_LENGTH)
-printKV('   by participant',min_part,FORMAT_KEY_LENGTH)
 
 #min_dist = min(records, key=lambda x: x[1])
 #print(min_dist)
@@ -121,9 +104,27 @@ for k,v in distance_dict.items():
     #create output as 'k' :
     output_dict[k] = [count,ind_total_dist]
 
+#print processing summary (# of input files read, number of lines read, total distance run)
+printKV('Number of input files read',overall_filecount,FORMAT_KEY_LENGTH)
+printKV('Total number of lines read',overall_line_count,FORMAT_KEY_LENGTH)
+printKV('Total distance run',overall_distance,FORMAT_KEY_LENGTH)
+
+#find max and min distance values (notation from https://dbader.org/blog/python-min-max-and-nested-lists)
+max_dist = max(records, key=lambda x: x[1])
+max_part,max_dist = max_dist
+min_dist = min(records, key=lambda x: x[1])
+min_part,min_dist = min_dist
+
+printKV('Max distance run',max_dist,FORMAT_KEY_LENGTH)
+printKV('   by participant',max_part,FORMAT_KEY_LENGTH)
+
+printKV('Min distance run',min_dist,FORMAT_KEY_LENGTH)
+printKV('   by participant',min_part,FORMAT_KEY_LENGTH)
+
 #print participant counts & repeat counts
 printKV('Total number of participants',participant_count,FORMAT_KEY_LENGTH)
 printKV('# participants w/ multiple records',repeat_count, FORMAT_KEY_LENGTH)
+
 
 #output data file with name, count, and total distance for each participant
 import csv
