@@ -78,3 +78,6 @@ while userinput != "quit" and userinput != "q" and userinput != "":
 
 #to ensure that the file exists in the directory... start the script with import os.path
 #in while loop, check as part of the conditions: and os.path.exists(file)
+
+# MN: you forgot to print the overall totals
+
