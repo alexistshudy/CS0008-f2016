@@ -1,3 +1,10 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: November 21, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Assignment 3 - Python Script
+
 from collections import defaultdict
 
 # length of the key, constant, for use in printKV function

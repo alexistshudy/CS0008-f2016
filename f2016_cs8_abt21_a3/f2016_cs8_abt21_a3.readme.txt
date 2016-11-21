@@ -1,51 +1,35 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: November 21, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Asignment 3 - Simple text file describing the thought process that was used to write program
+
 Outline:
 
 Import master input list
 for file name in master input list
     open file
-    extract name & distance (to a dictionary?)
+    extract name & distance tuples to a list
 
 (From previous assignment)
 Count # of files read
 Count total lines Read
 Sum total distance
-(New:)
+
     Max (all distances) - return max distance & participant name
     Min (all distances) - return min distance & participant name
     Count unique names
 
-Print (as stated in assignment, use printkv function from previous)
+Print Summary (as stated in assignment, use printkv function from previous)
 
-For each participant in masterlist (dictionary)?
-    Count # of appearances in list
+For each participant in masterlist, create a dictionary to combine repeats
+From that dictionary, loop through to:
+    Count # of appearances in list (use len(distance))
     Report if > 1
     calculate total distance
-Write to output file for each participant: Name,Count of entries, total distance
 
-            Lookup key to see if it already exists
-            If doesn't exist, create new key with value [] (empty list)
-            Retrieve value (the list associated with the key)
-            Use if value in to see if the value being checked exists in the list
-            If the new value isn't in, .append() it
-            (from stackoverflow - http://stackoverflow.com/questions/16406329/python-dictionary-count-of-unique-values)
-
-create a list of the names
-
-d = {}
-for name in names
-    key = len(name)
-    if key not in d:
-        d[key] = []
-    d[key].append(name)
-
-
-    from collections import defaultdict
-    masterdata = [(Mary,12.5),(John,15.2),(Mary,30.7),(Tom,120.6)]
-    d = defaultdict(list)
-    d
-defaultdict(<type 'list'>,{})
-    for name, dist in masterdata:
-        d[name].append(dist)
+Write to output file for each participant from dictionary: Name,Count of entries, total distance
 
 
 
