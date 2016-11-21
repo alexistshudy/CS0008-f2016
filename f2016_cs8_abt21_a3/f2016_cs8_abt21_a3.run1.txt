@@ -6,7 +6,6 @@
 # description: Assignment 3 - Output when run
 
 
-/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/Alexis/Documents/CS0008/CS0008-f2016/f2016_cs8_abt21_a3/f2016_cs8_abt21_a3.py
 Number of input files read           :  3
 Total number of lines read           :  450
 Total distance run                   :  23222.956

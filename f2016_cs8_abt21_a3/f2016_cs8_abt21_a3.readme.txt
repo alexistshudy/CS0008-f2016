@@ -3,7 +3,7 @@
 # date: November 21, 2016
 # class: CS0008-f2016
 # instructor : Max Novelli (man8@pitt.edu)
-# description: Asignment 3 - Simple text file describing the thought process that was used to write program
+# description: Asignment 3 - Simple text file describing the thought process that was used to write program.
 
 Outline:
 
