@@ -4,6 +4,9 @@
 # class: CS0008-f2016
 # instructor : Max Novelli (man8@pitt.edu)
 # description: Assignment 3 - Python Script
+#
+# Notes:
+# 
 
 from collections import defaultdict
 
@@ -47,6 +50,7 @@ repeat_count = 0
 participant_count = 0
 
 #select masterfile
+# MN: why not asking the user for the master list file name?
 masterfile = 'f2016_cs8_a3.data.txt'
 
 #create a list of file names from masterfile
