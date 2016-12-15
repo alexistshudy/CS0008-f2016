@@ -1,0 +1,15 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: December 15, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Final Project - Simple text file describing the thought process that was used to write program.
+
+
+For this program, I reused a significant amount of code from the third assignment, with the only change being the addition of the class
+From the dictionary of unique participants that I created from all of the records, I took each key-value pair (name: [dist1, dist2, dist3,...]
+and created a new instance of the class, Participant.
+
+I then used the modules in the class to calculate the total distance for each individual and the number of runs
+From a list of all class instances (all_p) I created the output to csv.
+

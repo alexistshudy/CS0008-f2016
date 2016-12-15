@@ -1,3 +1,10 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: December 15, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Final Project - Python Script
+
 #import collections module for casting to dictionary
 from collections import defaultdict
 
@@ -19,13 +26,13 @@ class Participant:
 
     #define method: add_distances
     #add an array of distances to the distance accumulator. Argument ld is a list of floats
-    def add_distances(ld):
+    def add_distances(self,ld):
         self.distance = sum(ld)
 
     #define method: get_name
     #Returns the name of the participant of the current instance
     def get_name(self):
-        return (self.name)
+        return self.name
 
     #define method: get_distance
     #Returns the current value of the distance accumulator
@@ -116,7 +123,7 @@ for filename in filenames:
         line_count += 1
         total_distance += dist
         #append naem & addistance to the records list
-        records.append(name,dist)
+        records.append((name,dist))
     #add to overall accumulator varialbles
     overall_filecount += 1
     overall_line_count += line_count
@@ -180,13 +187,13 @@ for name, dist in distance_dict.items():
 #output all_p to a csv
 #output data file with name, count, and total distance for each unique participant
 #assumes outputfile is in same directory or path is specified
-with open('f2016_cs8_abt21_fp.data.output.csv', w) as f:
+with open('f2016_cs8_abt21_fp.data.output.csv', 'w') as f:
     c = csv.writer(f, delimiter=',',escapechar=' ',quoting = csv.QUOTE_NONE)
     #create header row
     c.writerow(['name','count','total_distance'])
     #write each class isntance as a row on the csv
     for p in all_p:
-        c.writerow([p.get_name().rstrip(),p.get_runs],'{:.2f}'.format(p.get_distance())])
+        c.writerow([p.get_name().rstrip(), p.get_runs(), '{:.2f}'.format(p.get_distance())])
 
 #closefile
 f.close()
