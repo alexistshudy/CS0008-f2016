@@ -95,6 +95,8 @@ for filename in filenames:
     #close the file
     open_file.close()
 
+print(records)
+
 #Uses collections module, defaultdict to create a dictionary - combines repeat records with expected output as name: [dist1, dist2...]
 #initialize distance_dict using default dict form collections
 distance_dict= defaultdict(list)
