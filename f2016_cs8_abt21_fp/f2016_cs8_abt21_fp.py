@@ -10,7 +10,7 @@
 # import collections module for casting to dictionary
 from collections import defaultdict
 
-#import csv for csv output
+# import csv for csv output of records
 import csv
 
 # define class Participant
@@ -61,7 +61,7 @@ class Participant:
 # length of the key, constant, for use in printKV function
 FORMAT_KEY_LENGTH = 35
 
-#define printKV function (from instructor solution a2)
+# define printKV function (from instructor solution a2)
 def printKV(key,value,klen = 0):
     # check which is the length to be used when printing the key
     # max of klen and the length of key
@@ -88,25 +88,25 @@ def printKV(key,value,klen = 0):
     print(format(key,str(klen)+'s'),' : ',format(value,'<'+fvalue))
 # end def
 
-#initialize overall accumulator variables, to be updated with each new file input
+# initialize overall accumulator variables, to be updated with each new file input
 overall_filecount = 0
 overall_distance = 0
 overall_line_count = 0
 
-#ask user for master file name and set as variable: "masterinput";
+# ask user for master file name and set as variable: "masterinput";
 # assumes that masterfile is in the same directory or a file path is specified.
 masterinput = input("Please enter the name of your master file:")
 
-#create a list of file names from masterfile
-#initialize empty list
+# create a list of file names from masterfile
+# initialize empty list
 filenames = []
-#open masterfile
+# open masterfile
 open_masterinput = open(masterinput)
-#each line in the masterinput is a filename, append each filename to the empty list, "filenames"
+# each line in the masterinput is a filename, append each filename to the empty list, "filenames"
 for line in open_masterinput:
     filename = line.strip()
     filenames.append((filename))
-#close masterfile
+# close masterfile
 open_masterinput.close()
 
 #create master list of all name, distance records from all three files
@@ -200,13 +200,13 @@ for name, dist in distance_dict.items():
 #output all_p to a csv
 #output data file with name, count, and total distance for each participant
 #assumes outputfile is in same directory or path is specified
-with open('f2016_cs8_abt21_fp.data.output.csv', 'w') as f:
+with open('f2016_cs8_abt21_fp_test.data.output.csv', 'w') as f:
     c = csv.writer(f, delimiter=',',escapechar=' ',quoting = csv.QUOTE_NONE)
     #create header row
     c.writerow(['name','count','total_distance'])
     for p in all_p:
         c.writerow([p.get_name().rstrip(),p.get_runs(),'{:.2f}'.format(p.get_distance())])
-
+    f.close()
 
 #calculate participant count as length of all_p list
 participant_count = len(all_p)
