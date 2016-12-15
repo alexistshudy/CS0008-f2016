@@ -1,3 +1,21 @@
-#defining a class
-class Participant:
-    self parameter:
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: December 15, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Final Project - Output when run
+
+
+/Library/Frameworks/Python.framework/Versions/3.5/bin/python3.5 /Users/Alexis/Documents/CS0008/CS0008-f2016/f2016_cs8_abt21_fp/f2016_cs8_abt21_fp_test.py
+Please enter the name of your master file:f2016_cs8_fp.data.txt
+Number of input files read           :  3
+Total number of lines read           :  450
+Total distance run                   :  23222.956
+Max distance run                     :  99.918
+   by participant                    :  Roland
+Min distance run                     :  0.058
+   by participant                    :  Alex
+Total number of participants         :  388
+# participants w/ multiple records   :  60
+
+Process finished with exit code 0

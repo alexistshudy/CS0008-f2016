@@ -1,0 +1,33 @@
+# name: Alexis Tshudy
+# email: abt21@pitt.edu
+# date: December 15, 2016
+# class: CS0008-f2016
+# instructor : Max Novelli (man8@pitt.edu)
+# description: Final Project - Simple text file describing the thought process that was used to write program
+
+
+Program Outline:
+
+prereq: import collections module, import csv
+
+1. define class Participant per assignment instructions
+    Properties: name, distance, runs
+    Methods: __init__, add_distance, add_distances, get_name, get_distance, get_runs, __str__
+2. define printKV function (from instructor solution a2) for formatted printing of file summaries
+3. initialize accumulator variables for files read, lines read, and total distance
+4. ask for master file input
+5. process master file input and create a list of filenames
+6. create master list of all name, distance records from all three files
+    read each line in the open file, process using split and strip
+    add one to line_counter and add dist to total_distance
+    append name & distance to the records list
+    add to overall accumulator variables
+7. #print processing summary using printKV function (# of input files read, number of lines read, total distance run)
+8. #Uses collections module, defaultdict to create a dictionary (combines repeat records with expected output as name: [dist1, dist2...])
+9. find max and min distance values, cast as two separate vales (participant & value); (adapted from https://dbader.org/blog/python-min-max-and-nested-lists);
+    print min & max values per assignment formatting using printKV function
+10. initialize empty list, all_p to store each new class instance created; use class Participant from distance_dict
+11. output all_p to a csv; output data file with name, count, and total distance for each participant
+
+12. calculate participant count as length of all_p list
+13. #print participant counts & repeat counts
